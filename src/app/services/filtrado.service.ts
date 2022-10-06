@@ -36,7 +36,7 @@ export class FiltradoService {
         'Authorization': 'Basic ' + `${localStorage.getItem('user')}`
       })
     };
-    return this.api.put<Response>(`${this.API_TVSCROLLER}/sms/approve/${sms_id}`, null,httpOptions)
+    return this.api.put<Response>(`${this.API_TVSCROLLER}/sms/approve/${sms_id}`, null, httpOptions)
       .pipe(catchError((err) => this.handleError(err)), retry(3));
   }
 
@@ -47,7 +47,7 @@ export class FiltradoService {
         'Authorization': 'Basic ' + `${localStorage.getItem('user')}`
       })
     };
-    return this.api.put<Response>(`${this.API_TVSCROLLER}/sms/reject/${sms_id}`, null,httpOptions)
+    return this.api.put<Response>(`${this.API_TVSCROLLER}/sms/reject/${sms_id}`, null, httpOptions)
       .pipe(catchError(this.handleError), retry(3));
   }
 
@@ -70,7 +70,7 @@ export class FiltradoService {
         'Authorization': 'Basic ' + `${localStorage.getItem('user')}`
       })
     };
-    return this.api.put<Response>(`${this.API_TVSCROLLER_INTERNO}/sms/approve/${sms_id}`, null,httpOptions)
+    return this.api.put<Response>(`${this.API_TVSCROLLER_INTERNO}/sms/approve/${sms_id}`, null, httpOptions)
       .pipe(catchError((err) => this.handleError(err)), retry(3));
   }
 
@@ -81,7 +81,7 @@ export class FiltradoService {
         'Authorization': 'Basic ' + `${localStorage.getItem('user')}`
       })
     };
-    return this.api.put<Response>(`${this.API_TVSCROLLER_INTERNO}/sms/reject/${sms_id}`, null,httpOptions)
+    return this.api.put<Response>(`${this.API_TVSCROLLER_INTERNO}/sms/reject/${sms_id}`, null, httpOptions)
       .pipe(catchError(this.handleError), retry(3));
   }
 
