@@ -1,0 +1,14 @@
+.logged-user-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 25px;
+}
+
+.mat-icon {
+  vertical-align: middle;
+}

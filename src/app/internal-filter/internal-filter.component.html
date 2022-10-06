@@ -1,0 +1,36 @@
+<div class="filter-form">
+  <h1>TV Scroller Interno</h1>
+  <form>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Filtrado de mensajes</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-6">&nbsp;</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Texto del SMS</mat-label>
+              <textarea matInput [(ngModel)]="sms_text" readonly></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-error *ngIf="error">
+        {{error_message}}
+      </mat-error>
+      <mat-card-actions>
+        <button mat-raised-button color="primary"
+                type="button"
+                (click)="onSmsApprove($event)">Aprobar</button>
+        <button mat-raised-button color="primary"
+                type="button"
+                (click)="onSmsReject($event)" >
+          Rechazar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

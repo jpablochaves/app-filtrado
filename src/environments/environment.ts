@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  API: "http://localhost:8000/v1/teleton/filtrado",
+  API_INTERNO: "http://localhost:8000/v1/teleton/filtrado/interno",
 };
 
 /*

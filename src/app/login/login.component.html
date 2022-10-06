@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <form #loginForm="ngForm" (ngSubmit)="onLoginSubmit()">
+      <h2>Inicio</h2>
+      <mat-error *ngIf="!loginValid" class="error">
+        {{error_message}}
+      </mat-error>
+      <mat-form-field>
+        <input matInput placeholder="Usuario" [(ngModel)]="username" name="username" required>
+        <mat-error>
+          Ingrese su usuario
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
+        <mat-error>
+          Ingrese su contraseña
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Ingresar</button>
+    </form>
+  </mat-card-content>
+</mat-card>
